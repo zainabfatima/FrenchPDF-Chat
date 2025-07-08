@@ -1,22 +1,36 @@
-# Multiperson Pose Estimation using YOLOv8 & Mediapipe 🤖
+# Chat-with-French-PDFs 🇫🇷📄
 
-This project combines YOLOv8 (for people detection) and Mediapipe (for pose estimation) to detect and visualize the poses of **multiple people** in a video.
-
----
-
-## 🎯 Project Overview
-
-Since **Mediapipe Pose** only supports **single-person detection**, this project:
-- Uses **YOLOv8** to detect multiple people
-- Crops each detected person out of the frame
-- Applies **Mediapipe Pose** on each person
-- Reconstructs the annotated full-frame video with all pose estimations
+An interactive question-answering application that allows users to upload **French-language PDFs or text files** and ask questions related to their contents using **LangChain**, **FAISS**, and **OpenAI's GPT models**.
 
 ---
 
-## 🧰 Requirements
+## 🚀 Features
 
-Install dependencies:
+- Upload multiple `.pdf` or `.txt` files
+- Extracts and embeds text using OpenAI embeddings
+- Uses FAISS for semantic similarity search
+- Retrieves relevant content to answer user questions
+- Generates sample question-answer pairs using LangChain's QA Generator
+- Built with a clean and interactive **Streamlit** interface
+
+---
+
+## 📁 Project Structure
+
+Chat-with-French-PDFs/
+├── qa_app.py # 🚀 Main Streamlit app: handles UI and logic
+├── requirements.txt # 📦 List of Python dependencies
+├── README.md # 📘 Project documentation (you are here)
+└── img/
+└── logo1.png # 🖼 Logo displayed in the Streamlit sidebar
+
+---
+
+## 🛠 Installation
+
+1. **Clone the repository:**
 
 ```bash
-pip install mediapipe ultralytics opencv-python numpy pandas
+git clone https://github.com/moaaz12-web/Chat-with-French-PDFs.git
+cd Chat-with-French-PDFs
+
