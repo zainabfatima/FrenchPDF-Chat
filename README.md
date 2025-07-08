@@ -1,30 +1,22 @@
-# Chat-with-French-PDFs
+# Multiperson Pose Estimation using YOLOv8 & Mediapipe 🤖🕺
 
-It is a question-answering application that allows users to upload PDFs and ask questions related to the content of those documents, tailored for the French language,
+This project combines YOLOv8 (for people detection) and Mediapipe (for pose estimation) to detect and visualize the poses of **multiple people** in a video.
 
+---
 
-## Installation
+## 🎯 Project Overview
 
-Clone this repository:
+Since **Mediapipe Pose** only supports **single-person detection**, this project:
+- Uses **YOLOv8** to detect multiple people
+- Crops each detected person out of the frame
+- Applies **Mediapipe Pose** on each person
+- Reconstructs the annotated full-frame video with all pose estimations
 
-```bash
-git clone https://github.com/moaaz12-web/Chat-with-French-PDFs.git
-cd pdf-analyze-streamlit
-```
+---
 
-Create a virtual environment and install the required packages:
+## 🧰 Requirements
 
-```bash
-python -m venv venv
-source venv/bin/activate  # For Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-## Usage
-To run the app, simply execute the following command:
+Install dependencies:
 
 ```bash
-streamlit run qa_app.py
-```
-
-After running the command, you can access the app through your web browser using the provided URL.
+pip install mediapipe ultralytics opencv-python numpy pandas
